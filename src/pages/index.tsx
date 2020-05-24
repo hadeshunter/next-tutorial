@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { initialData: data } };
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await fetcher(URL_PRODUCT_LIST);
-  return { props: { initialData: data } };
-};
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const data = await fetcher(URL_PRODUCT_LIST);
+//   return { props: { initialData: data } };
+// };
