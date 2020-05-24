@@ -1,0 +1,56 @@
+@import "./color.scss";
+
+// Phát Thành branding colors
+$pt-color-gold: #fdb913;
+$pt-color-basalt: #4e2f14;
+
+// $blue1: hsl(203, 82%, 30%) !default;
+// $blue2: hsl(203, 82%, 35%) !default;
+// $blue3: hsl(203, 82%, 41%) !default;
+// $blue4: hsl(203, 68%, 50%) !default;
+// $blue5: hsl(203, 85%, 61%) !default;
+
+$blue1: hsl(28, 59, 9%) !default;
+
+$blue2: hsl(28, 59, 19%) !default;
+$blue3: hsl(28, 59, 29%) !default;
+$blue4: hsl(28, 59, 39%) !default;
+$blue5: hsl(28, 59, 49%) !default;
+
+$black: hsla(28, 59, 9, 1) !default;
+
+$gray1: rgba($pt-color-basalt, 0.8) !default;
+$gray2: hsl(28, 13, 52) !default;
+$gray3: hsl(28, 15, 60) !default;
+$gray4: hsl(28, 18, 71) !default;
+$gray5: hsl(28, 22, 79) !default;
+
+$dark-gray1: hsl(28, 16, 9) !default;
+$dark-gray2: hsl(28, 13, 13) !default;
+$dark-gray3: hsl(28, 15, 18) !default;
+$dark-gray4: hsl(28, 18, 22) !default;
+$dark-gray5: hsl(28, 22, 26) !default;
+
+$light-gray1: hsl(0, 0, 84) !default;
+$light-gray2: hsl(0, 0, 88) !default;
+$light-gray3: hsl(0, 0, 91) !default;
+$light-gray4: hsl(0, 0, 94) !default;
+$light-gray5: hsl(0, 0, 97) !default;
+
+$break-small: 700px;
+$break-large: 1012px;
+
+@mixin media($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == pc {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
+@import "~@blueprintjs/core/src/blueprint.scss"
